@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/inputPort"
+        android:layout_width="210dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Port Number"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/inputAddress"
+        app:layout_constraintTop_toBottomOf="@+id/inputAddress" />
+
+    <EditText
+        android:id="@+id/inputChannel"
+        android:layout_width="210dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Message Server"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/inputAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        app:layout_constraintBottom_toTopOf="@+id/filterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/disconnectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:text="Disconnect"
+        app:layout_constraintBottom_toTopOf="@+id/channelButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterButton" />
+
+    <Button
+        android:id="@+id/channelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:text="Change Channel"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disconnectButton" />
+
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Filter"
+        app:layout_constraintBottom_toTopOf="@+id/disconnectButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connectButton" />
+
+    <EditText
+        android:id="@+id/inputAddress"
+        android:layout_width="207dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="IP Address"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/inputPort"
+        app:layout_constraintStart_toStartOf="@+id/inputChannel"
+        app:layout_constraintTop_toBottomOf="@+id/inputChannel" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/channelButton" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
